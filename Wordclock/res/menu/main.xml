@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Search, should appear as action button -->
+    <item
+        android:id="@+id/menu_connect"
+        android:icon="@drawable/ic_action_bluetooth_disconnected"
+        android:showAsAction="ifRoom"
+        android:title="Connect"/>
+    <item
+        android:id="@+id/menu_randomise"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_randomise"
+        android:title="Randomise"/>
+    <item
+        android:id="@+id/menu_settings"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/action_settings"/>
+</menu>

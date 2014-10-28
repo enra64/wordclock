@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="tutorialClicked"
+        android:text="Tutorial" />
+
+    <TextView
+        android:id="@+id/shakeTresholdDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Shake Treshold: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/shakeTresholdBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shakeTresholdDesc"
+        android:layout_toLeftOf="@+id/shakeTreshold"
+        android:layout_weight="1"
+        android:max="3000" />
+
+    <TextView
+        android:id="@+id/shakeTreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/shakeTresholdBar"
+        android:text="1000"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/shakeDelayDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shakeTresholdBar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Shake Delay: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/shakeDelayBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shakeDelayDesc"
+        android:layout_toLeftOf="@+id/shakeDelay"
+        android:layout_weight="1"
+        android:max="1500" />
+
+    <TextView
+        android:id="@+id/shakeDelay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/shakeDelayBar"
+        android:layout_alignParentRight="true"
+        android:text="700 ms"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/refreshRateDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shakeDelayBar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Refresh delay: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/refreshRateBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/refreshRateDesc"
+        android:layout_toLeftOf="@+id/refreshRate"
+        android:layout_weight="1"
+        android:max="1200" />
+
+    <TextView
+        android:id="@+id/refreshRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/refreshRateBar"
+        android:layout_alignParentRight="true"
+        android:text="100ms"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/refreshRateBar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Sleep times"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/noSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="None"
+            android:onClick="sleepRadio" />
+
+        <RadioButton
+            android:id="@+id/shortSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24:00 - 8:00"
+            android:onClick="sleepRadio" />
+
+        <RadioButton
+            android:id="@+id/longSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22:00 - 10:00"
+            android:onClick="sleepRadio" />
+    </RadioGroup>
+
+</RelativeLayout>
